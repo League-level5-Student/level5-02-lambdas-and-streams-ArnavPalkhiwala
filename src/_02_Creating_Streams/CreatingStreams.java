@@ -32,7 +32,7 @@ public class CreatingStreams {
 		dQueue.push(2.0);
 		dQueue.push(3.0);
 
-		Stream s = Arrays.stream(strArr);
+		Stream<String> s = Arrays.stream(strArr);
 		intList.stream();
 		randStack.stream();
 		dQueue.stream();

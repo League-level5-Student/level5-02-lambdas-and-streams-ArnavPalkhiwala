@@ -2,6 +2,7 @@ package _03_Sorting_With_Streams;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamSorter {
@@ -13,14 +14,11 @@ public class StreamSorter {
 		}
 		
 		//1. Convert the Integer array to Stream object.
-		Stream s = Arrays.stream(nums);
+		Stream<Integer> stream = Arrays.stream(nums);
 		//2. Use the sorted method of the stream to sort the numbers.
-		s.sorted();
+		Stream<Integer> sortedStream = stream.sorted();
 		//3. Use the forEach method with a lambda to print all the elements of the sorted Stream.
 		//   They should be in ascending order.
-		
-		 for (Integer integer : nums) {
-			
-		}
+		sortedStream.forEach(num -> System.out.println(num));
 	}
 }
